@@ -1,0 +1,568 @@
+winimage (0.151019.1)
+  * remove some not used files
+-- Xun Chen <chenx77@gmail.com>  Mon, 19 Oct 2015 16:05:00 +0200
+
+winimage (0.140323.1)
+  * status after 2nd patent 2014
+-- Xun Chen <chenx77@gmail.com>  Sun, 23 Mar 2014 23:15:00 +0200
+
+winimage (0.140226.2)
+  * corrections for Qt Linux
+-- Xun Chen <chenx77@gmail.com>  Wed, 26 Feb 2014 22:36:00 +0200
+
+winimage (0.140226.1)
+  * status at patent writing
+-- Xun Chen <chenx77@gmail.com>  Wed, 26 Feb 2014 20:55:00 +0200
+
+winimage (0.140214.1)
+  * solved issue raised in (0.140213.1)
+  * new func get_line_ends_and_alpha() to replace get_line_alpha()
+  * more "if no idea line"
+  * use conditions lineEndOk and alphaOk to choose master line
+  * keep original m_threshold
+-- Xun Chen <chenx77@gmail.com>  Fri, 14 Feb 2014 23:51:00 +0200
+
+winimage (0.140213.1)
+  * rotater.cpp: more tune on get_shift_values() if no idea line
+  * common min_alpha
+  * m_threshold test
+  * remove redundent save as suffix .bmp .jpg
+-- Xun Chen <chenx77@gmail.com>  Thu, 13 Feb 2014 21:33:00 +0200
+
+winimage (0.140210.1)
+  * working around on get_shift_values() in 4th quater m_sign > 0
+  * further study is needed on m_sign and other quaters as well
+-- Xun Chen <chenx77@gmail.com>  Tue, 10 Feb 2014 22:12:00 +0200
+
+winimage (0.140209.3)
+  * re-arrange Test 0 to 9, and with notation on menu bar
+-- Xun Chen <chenx77@gmail.com>  Sun, 09 Feb 2014 23:12:00 +0200
+
+winimage (0.140209.2)
+  * turn func Test() into HideRollOutCorners() and 1st try to use
+  * upper case for public func names
+  * new enum MarkType and used in markOnImage()
+  * move unnecessary public funcs to private
+  * use "* 0.5" to replace "/ 2"
+-- Xun Chen <chenx77@gmail.com>  Sun, 09 Feb 2014 22:38:00 +0200
+
+winimage (0.140209.1)
+  * new func rotater.get_line_cross_point() and Test() for it
+  * reset gadget _a_number
+  * use slotTest0() to test get_line_cross_point()
+-- Xun Chen <chenx77@gmail.com>  Sun, 09 Feb 2014 19:52:00 +0200
+
+winimage (0.140208.2)
+  * use new func get_line_alpha()
+-- Xun Chen <chenx77@gmail.com>  Sat, 08 Feb 2014 17:34:00 +0200
+
+winimage (0.140208.1)
+  * a better compromice between test images are real life pictures
+  * use line's alpha & prefered_group to judge if it can be selected as master line
+  * cleanup debug prints
+-- Xun Chen <chenx77@gmail.com>  Sat, 08 Feb 2014 17:17:00 +0200
+
+winimage (0.140207.2)
+  * improved effect to test color images
+  * if orthogonal doesn't exist, use baseline
+  * found another issue, the master line hides by rotation, no sence to be master
+-- Xun Chen <chenx77@gmail.com>  Fri, 07 Feb 2014 23:15:00 +0200
+
+winimage (0.140207.1)
+  * master line selection consider only orthogonal lines against the picture's edges
+  * this is good to real pictures, but there is a side effect to test color images
+-- Xun Chen <chenx77@gmail.com>  Fri, 07 Feb 2014 22:32:00 +0200
+
+winimage (0.140114.1)
+  * use xx/yy to represent x0/y0 or y0/y1
+  * if no ideal line's end found, use pseudo point instead
+-- Xun Chen <chenx77@gmail.com>  Sat, 14 Jan 2014 17:01:00 +0200
+
+winimage (0.140110.1)
+  * error correction by adding use_end = -1
+  * streamline get_shift_values() furfer
+-- Xun Chen <chenx77@gmail.com>  Fri, 10 Jan 2014 00:10:00 +0200
+
+winimage (0.140109.2)
+  * remove comment off lines from last commit
+-- Xun Chen <chenx77@gmail.com>  Thu, 09 Jan 2014 15:47:00 +0200
+
+winimage (0.140109.1)
+  * simplify get_shift_values()
+-- Xun Chen <chenx77@gmail.com>  Thu, 09 Jan 2014 15:32:00 +0200
+
+winimage (0.140108.1)
+  * more conditions in get_shift_values() clockwise:
+  * case 1: (x0 == 0 && y0 != 0)
+  * case 2: (y1 == 0)
+  * case 4: (y0 == m_height)
+  * test images update orangeX.bmp
+-- Xun Chen <chenx77@gmail.com>  Wed, 08 Jan 2014 23:45:00 +0200
+
+winimage (0.140107.2)
+  * use qreal to replace float
+-- Xun Chen <chenx77@gmail.com>  Tue, 07 Jan 2014 22:27:00 +0200
+
+winimage (0.140107.1)
+  * improve print lines information with "X lines"
+-- Xun Chen <chenx77@gmail.com>  Tue, 07 Jan 2014 21:20:00 +0200
+
+winimage (0.140106.5)
+  * more (m_sign == -1) cases: (y1 == 0), (x0 == m_width), (x1 == 0)
+  * pan only 3/4 of half for quater 1 too
+  * a bit lighter dark-blue color in slotTest8()
+-- Xun Chen <chenx77@gmail.com>  Mon, 06 Jan 2014 22:53:00 +0200
+
+winimage (0.140106.4)
+  * cleanup and rename test images
+-- Xun Chen <chenx77@gmail.com>  Mon, 06 Jan 2014 20:44:00 +0200
+
+winimage (0.140106.3)
+  * replace int m_cx, m_cy with float m_width, m_height
+  * add situation of (m_sign == 1) & (x1 == m_width)
+-- Xun Chen <chenx77@gmail.com>  Mon, 06 Jan 2014 19:59:00 +0200
+
+winimage (0.140106.2)
+  * fix error in case (m_sign == 1) and (x1 == 0), and removed (y0 == 0)
+  * pan only 3/4 of half image to avoid damage previous quater
+  * qDebug shifting rect_half mentioned above
+-- Xun Chen <chenx77@gmail.com>  Mon, 06 Jan 2014 17:33:00 +0200
+
+winimage (0.140106.1)
+  * pan only 3/4 of a half (1 + move2/2) in case of quater 4
+  * if (x0 == 0 || y0 == 0) in case quater 1 of positive theta
+  * always fabs(yr - y0) + fabs(xr - x0)/tan(alpha_rad);
+  * no need to compensate + 0.5
+  * angle depends on quater #: alpha = 180 - alpha; alpha = 90 - alpha;
+  * move all into if condition
+  * remove marked off from last time
+-- Xun Chen <chenx77@gmail.com>  Mon, 06 Jan 2014 15:42:00 +0200
+
+winimage (0.140105.4)
+  * cleanup or comment off useless code
+  * algrithm comments
+-- Xun Chen <chenx77@gmail.com>  Sun, 05 Jan 2014 20:50:00 +0200
+
+winimage (0.140105.3)
+  * adjust test images red*
+-- Xun Chen <chenx77@gmail.com>  Sun, 05 Jan 2014 20:12:00 +0200
+
+winimage (0.140105.2)
+  * no need of move1/move2 in transform.translate( -m_dx[1] * move1, -m_dy[1] * move2);
+  * temparorily fix in quater 2/4 when rotate minus angle, partially caused by following:
+  * noticed line detected wrongly as negtive angle which should be positive
+-- Xun Chen <chenx77@gmail.com>  Sun, 05 Jan 2014 13:39:00 +0200
+
+winimage (0.140105.1)
+  * new func get_shift_values() to replace get_cross_value() + get_shift_value()
+  * take ed.smoothImage(destImage) back to the process
+  * use both get_shift_values and ones it replaces for comparison
+  * other error corrections
+  * more comments
+-- Xun Chen <chenx77@gmail.com>  Sun, 05 Jan 2014 12:02:00 +0200
+
+winimage (0.131231.1)
+  * added slotTest9() to leave room for slotTest7() to display_voting_map() and display_lines()
+  * fix problem in slotTest0 to use Rotater *rotater = new Rotater()
+-- Xun Chen <chenx77@gmail.com>  Tue, 31 Dec 2013 14:15:00 +0200
+
+winimage (0.131230.3)
+  * fix y1 = 0; which should be *y1 = 0;
+-- Xun Chen <chenx77@gmail.com>  Mon, 30 Dec 2013 21:51:00 +0200
+
+winimage (0.131230.2)
+  * more algrithm comments and cleanup
+  * deal with if y0/y1 out of range in case of x = ay + b
+  * keep alpha angle in range of [0, 180]
+  * start to simplify get_cross_value()
+-- Xun Chen <chenx77@gmail.com>  Mon, 30 Dec 2013 20:57:00 +0200
+
+winimage (0.131230.1)
+  * fix problem if x0 out of range in case of y = ax + b
+  * fix issue of wrong x1 value in case of x = ay + b
+-- Xun Chen <chenx77@gmail.com>  Mon, 30 Dec 2013 13:16:00 +0200
+
+winimage (0.131229.2)
+  * if (x1, y1) not at width/height edge
+  * remove get_line_parameters_old()
+  * re-arrange public funcs in line_detector.h
+  * remove display_* calls from detectImage() to avoid interference
+-- Xun Chen <chenx77@gmail.com>  Sun, 29 Dec 2013 21:23:00 +0200
+
+winimage (0.131229.1)
+  * reform func get_line_parameters(), keep get_line_parameters_old() for a while
+  * therefore no need of int big = 999999 anymore
+  * keep printing even if line.vote < 5
+  * more comments at rotater.cpp
+  * streaming line and debug rotater.cpp
+  * add note.txt
+  * add "colour" test images red, green, blue, orange etc.
+-- Xun Chen <chenx77@gmail.com>  Sun, 29 Dec 2013 19:45:00 +0200
+
+winimage (0.131228.1)
+  * use member m_transform to replace local transform
+  * func set_shift_value() renamed as get_shift_value()
+  * should be m_dx[quater] = m_dy[quater] instead of m_dx[quater] = m_dx[quater]
+  * use m_transform.map instead tri-angle func to get_shift_value use
+  * new help func markOnImage() and remove other abandoned ones
+  * increase 4 to 6 int m_dx[6], m_dy[6] for testing purpose
+-- Xun Chen <chenx77@gmail.com>  Sat, 28 Dec 2013 21:38:00 +0200
+
+winimage (0.131225.1)
+  * fixed conpensation move dx2 that was wrong on sign direction
+-- Xun Chen <chenx77@gmail.com>  Wed, 25 Dec 2013 13:44:00 +0200
+
+winimage (0.131223.3)
+  * 2nd/4th quater problem is actually one issue
+-- Xun Chen <chenx77@gmail.com>  Mon, 23 Dec 2013 16:25:00 +0200
+
+winimage (0.131223.2)
+  * temporarily fixed 2nd quater theta 7 problem
+-- Xun Chen <chenx77@gmail.com>  Mon, 23 Dec 2013 16:15:00 +0200
+
+winimage (0.131223.1)
+  * temporarily fixed 4th-quater theta < 9 problem
+  * better layout of Line_detector::print
+-- Xun Chen <chenx77@gmail.com>  Mon, 23 Dec 2013 15:17:00 +0200
+
+winimage (0.131220.4)
+  * more memory leak fixed in slotTestX paths
+-- Xun Chen <chenx77@gmail.com>  Fri, 20 Dec 2013 16:00:00 +0200
+
+winimage (0.131220.3)
+  * more memory leak removed
+  * use Node node instead of Node *node
+  * delete rotater;
+  * add winimage.pro.user.1.3 as cross configuration instrument
+-- Xun Chen <chenx77@gmail.com>  Fri, 20 Dec 2013 14:36:00 +0200
+
+winimage (0.131220.2)
+  * further investigation proves Rotater rotater = Rotater(_image, thita) introduced
+    earlier destruction, so use Rotater *rotator = new Rotater(_image, thita) instead
+    now we can delete m_line_detector;
+-- Xun Chen <chenx77@gmail.com>  Fri, 20 Dec 2013 13:53:00 +0200
+
+winimage (0.131220.1)
+  * fix _BLOCK_TYPE_IS_VALID(pHead->nBlockUse) problem:
+  * maybe caused by over free memory leaks as delete m_line_detector in class Rotater
+  * further investigation is needed
+-- Xun Chen <chenx77@gmail.com>  Fri, 20 Dec 2013 11:23:00 +0200
+
+winimage (0.131219.1)
+  * fix the largest part of memory leaks
+-- Xun Chen <chenx77@gmail.com>  Thu, 19 Dec 2013 15:17:00 +0200
+
+winimage (0.131217.1)
+  * changes made latest at date 130414 on a linux machine
+-- Xun Chen <chenx77@gmail.com>  Tue, 17 Dec 2013 10:23:00 +0200
+
+winimage (0.130408.1)
+  * able to shift image in each quater independantly
+  * renamed funcs: shift()/set_shift_value(), get_top_line_from_quater()/get_master_line()
+  * parameters changed: set_shift_value()
+  * member changed: m_dx[5], m_dy[5]
+  * important bug fixed: m_dx = abs(m_dx) etc
+  * new funcs: get_cross_value()
+  * comment off funcs not in use at the moment
+-- Xun Chen <chenx77@gmail.com>  Mon, 08 Apr 2013 20:34:00 +0200
+
+winimage (0.130405.1)
+  * reform LineFacts print
+  * rename m_xc to m_cx etc, move m_sign and m_scale as member
+  * fix crash at Rotater::readLines()
+  * more test image
+-- Xun Chen <chenx77@gmail.com>  Fri, 05 Apr 2013 23:51:00 +0200
+
+winimage (0.130403.1)
+  * approaching 4 quaters' line parameters
+  * new func Line_detector::reset()
+  * change interface Rotater::shift(), Rotater::get_top_line_from_quater()
+  * new member Rotater::*m_line_detector
+-- Xun Chen <chenx77@gmail.com>  Wed, 03 Apr 2013 23:44:00 +0200
+
+winimage (0.130401.1)
+  * simplified api Line_detector::get_line_parameters()
+  * able to detect top line from each quater of an image
+  * test images from Lumia
+  * renamed func: Rotater::detect_lines() to get_top_line_from_quater()
+-- Xun Chen <chenx77@gmail.com>  Mon, 01 Apr 2013 22:43:00 +0200
+
+winimage (0.130329.1)
+  * fixed fake edge/line at picture's edges
+  * rename NMSImage() to nmsImage()
+  * new parameter bool copy_margin to edge_detector::get_neighbor_pixels()
+  * new func WinImage::slotTest7()
+-- Xun Chen <chenx77@gmail.com>  Fri, 29 Mar 2013 10:43:00 +0200
+
+winimage (0.130324.1)
+  * new funcs: Rotater::detect_lines(), Rotater::readLines()
+  * new member variable floatRotater:: m_theta;
+  * use WinImage::slotTest0() to test corner lines detection
+  * cleanup to avoid redundant includes and simplify api's
+  * cleanup old stuff in winimage.cpp
+  * add doxygen control and logo image
+-- Xun Chen <chenx77@gmail.com>  Sun, 24 Mar 2013 11:35:00 +0200
+
+winimage (0.130323.2)
+  * add missing class Rotater
+  * streamline Rotater
+-- Xun Chen <chenx77@gmail.com>  Sat, 23 Mar 2013 19:24:00 +0200
+
+winimage (0.130323.1)
+  * move rotation functions into Rotater class
+  * blob_extract() works better
+-- Xun Chen <chenx77@gmail.com>  Sat, 23 Mar 2013 15:13:00 +0200
+
+winimage (0.130224.1)
+  * fix bug in detectEdgeImage(), caused by confusion of line/gradien directions
+  * fix bug in NMSImage(), that was leading a disappear of blue/yellow thick lines
+-- Xun Chen <chenx77@gmail.com>  Sun, 24 Feb 2013 23:28:00 +0200
+
+winimage (0.130223.1)
+  * Canny hysteresis thresholding, the last key step to link weak
+    points to strong finally works. The real solution is following:
+    if (color == 1) linked[lowest-1].color = 1;
+-- Xun Chen <chenx77@gmail.com>  Sat, 23 Feb 2013 19:16:00 +0200
+
+winimage (0.130222.1)
+  * Canny edge detection works
+  * differentiate Canny_Edge_Detection and blob categorization
+  * added color to Node and use new to create Node
+  * assign parent root color = 1 if one of two merging node is color=1
+  * re-adjust T1 = 16 & T2 = 12
+  * have test6 and split edge detection in 6+1 steps
+-- Xun Chen <chenx77@gmail.com>  Fri, 22 Feb 2013 23:33:00 +0200
+
+winimage (0.130212.1)
+  * new class: merge_find with func blob_extract()
+  * renaming: get_neighbors()/get_neighbor_pixels()
+  * new test image for blob_extract
+-- Xun Chen <chenx77@gmail.com>  Tue, 12 Feb 2013 23:47:00 +0200
+
+winimage (0.130205.1)
+  * remove double lines, some with strange ways like followings (but all correct?)
+  * if (b == 301 && (a > 180 || a == 108)) return false;
+  * if (a+i > m_dimA-4) a = 0; // -i, b = m_dimB*2/3 - b;
+  * local_support_range = 8; m_neighbor_range = 12;
+  * back to if (support < otherSupport) return false;
+  * back to m_threshold = 3 + sqrt(m_vote_count) * 0.75;
+  * if (get_local_delta(form)*form.group < formOther.group*get_local_delta(formOther))
+  * if (pb >= 2*W) qc.setBlue(255);
+-- Xun Chen <chenx77@gmail.com>  Tue, 05 Feb 2013 23:01:00 +0200
+
+winimage (0.130202.1)
+  * remove dependency examples.pri
+  * safe guard while vote like if (b+m_dimB0 >= 0 && b+m_dimB0 < m_dimB)
+  * cleanup get_line_parameters after guard as above
+  * change m_dimB to max(image_width, image_height) * 3
+  * add m_dimB0 = max(image_width, image_height);
+  * adjust Mobius to fit new m_dimB
+  * more test images
+-- Xun Chen <chenx77@gmail.com>  Sat, 02 Feb 2013 12:36:00 +0200
+
+winimage (0.130129.1)
+  * bug fix is_local_strong(form, 3) => (form, m_neighbor_range)
+  * bug fix get_local_delta: for (int j=-1; j<2; j++) => (int j=-range; j<=range; j++)
+  * move m_vote_count & m_threshold print out from detector.cpp to line_detector.cpp
+  * test m_threshold = sqrt(m_vote_count) * 0.9;
+  * corner cases test images
+  * all corner cases, 45-degree lines can be detected
+-- Xun Chen <chenx77@gmail.com>  Tue, 29 Jan 2013 22:49:00 +0200
+
+winimage (0.130126.1)
+  * detect lines in ordinary images after edge detected
+  * working on other corners in an image, e.g., *b = (line.b>200) ? (m_dimB + 101 - line.b)
+  * new func: double_thresholding()
+  * move m_threshold calculation from detector.cpp to line_detector.cpp
+  * error correction: b+j>B-1 => b+j>m_dimB-1
+  * remove get_layer_top()
+  * more comments detector::in is_local_high() & is_local_strong()
+  * use more qDebug() instead of printf() in detector::print()
+  * may change back: "b = m_dimB - 100 - b;" => "b = 201 - b;" detector::in is_local_high()
+  * remove forgotten P/Q[A][B] stuff
+  * use int kernel = 0 as default
+  * use qc.lightness() instead qc.red/green() to vote
+  * extend to detect larger images: Line_detector(200, H+W)
+  * edge detection in both slotTest steps & slotEdgeDetect
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Sat, 26 Jan 2013 15:09:00 +0200
+
+winimage (0.130124.1)
+  * new: move all edge detect funcs from transformer to edge_detector.cpp
+  * renamming: get_local_highs()/get_all_above_threshold(), slotEdgeDetect()/slotDetectEdge()
+  * remove: get_layer_top()
+  * testing: split edge detection in steps slotTest1/2/3
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Thu, 24 Jan 2013 10:08:00 +0200
+
+winimage (0.130122.2)
+  * it's the time to remove olderest code with vote map P and Q who contributed a lot
+  * therefore also the Detector::vote()
+  * streamline creator, initilize & reset further
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Tue, 22 Jan 2013 17:02:00 +0200
+
+winimage (0.130122.1)
+  * streamline shared methods in detector/line_detector/circle_detector
+  * new funcs: get_local_delta() to remove repeating objects they have same support
+  * move m_threshold = xxx from get_local_highs() to get_local_tops() to avoid confusion
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Tue, 22 Jan 2013 14:15:00 +0200
+
+winimage (0.130121.1)
+  * back to work on line detector, make it bettwer
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Mon, 21 Jan 2013 16:50:00 +0200
+
+winimage (0.130120.1)
+  * new funcs colorPlus()
+  * create real fake image at loadDataImage instead load empty.jpg
+  * use smaller m_dim* to support faked image
+  * slotSaveAs() & slotOpen() with pre-defined suffixes
+  * to make sure not to mix line and circle with layer = -1
+  * range of get_local_support reduced to 3
+  * streamline get_local_tops
+  * m_offset to show faked image
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Sun, 20 Jan 2013 11:51:00 +0200
+
+winimage (0.130118.1)
+  * slotOpen can open testdata.txt files and show in image as well
+  * use scale to zoom data from 3d gesture as image
+  * use m_neighbor_range in is_local_strong()
+  * data lines can be marked off by '#'
+  * testdata can be generated from a test image
+  * temporary solution for faked image from 3d gesture: if (r > 14 || b > 20) continue
+  * adaptive m_threshold = sqrt(m_vote_count)
+  * re-naming: detectLineImage/detectImage, loadFile/loadImage
+  * new func: readTextFile(), slotTest4(), loadDataImage(), detectDataImage()
+  * new file: testdata*.txt, empty.jpg
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Fri, 18 Jan 2013 15:52:00 +0200
+
+winimage (0.130116.2)
+  * nultiple circles (1/2/3) work better, as set m_neighbor_range=8 & m_threshold=17
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Thu, 16 Jan 2013 16:22:00 +0200
+
+winimage (0.130116.1)
+  * circle can detect the first circle
+  * implement key funcs in circle detector
+  * rename: Shape/Form, get_rough_lines()/get_local_highs(), is_local_max()/is_local_high(),
+    get_lines/get_all_tops, LineTable/FormTable,
+  * move get_lines to line_detector
+  * new funcs: get_layer_top
+  * re-arrange Form's variables order
+  * new PrintWhat item CircleFacts
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Thu, 16 Jan 2013 13:44:00 +0200
+
+winimage (0.130114.1)
+  * seperate line detection from detector to line_detector
+  * clever ways to print dashline
+  * move print LineFacts from detector to line detector
+  * support big (201x301) voting map display
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Mon, 14 Jan 2013 21:34:00 +0200
+
+winimage (0.130113.1)
+  * united voting map V(a, b) is obviously better than two maps P and Q,
+    keep both for a while with switcher USE_V_MAP
+  * set b(p) = 100-p if V[150-200][p:0-200] to make two y(ax) and x(ay) continue at a=1
+  * add member variables: m_neighbor_range, m_threshold
+  * remove get_local_equal(), reshaped with is_local_strong()
+  * use stringstream int2string to transport int messages, e.g., H & W
+  * use red/green colors to differentiate line and cross display
+  * have deshline to share same text printing seperations
+  * rename enum PrintWhat items
+  * seperate get_line_parameters from display_lines
+  * more print what e.g. MapV, LineFacts, and new parameter message
+  * renaming: scan/vote, show_voting_map/display_voting_map, show_lines/display_lines
+  * change P/Q casting range from [-50, 50) to [-50, 50]
+  * more test pics like aline45-0s.jpg
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Sun, 13 Jan 2013 12:12:00 +0200
+
+winimage (0.130111.1)
+  * variable print() function with enum PrintWhat
+  * use Line instead of a, b, group as parameters
+  * remove repeating lines which have equal vote but weak surrounding
+  * streamline the whole code
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Fri, 11 Jan 2013 16:19:00 +0200
+
+winimage (0.130109.2)
+  * voting map display
+  * new functions: getTrueLines()
+  * showLinesImage() seperated from houghImage()
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Wed, 09 Jan 2013 23:01:00 +0200
+
+winimage (0.130109.1)
+  * line detection works for all angles, alpha = [0, 180]
+  * helped by double duo functions y = ax + b and x = cy + d
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Wed, 09 Jan 2013 11:10:00 +0200
+
+winimage (0.130108.1)
+  * working on seperating function value areas for y = ax + b [0, pi/4) (3pi/4, pi] and x = cx + d [pi/4, 3pi/4]
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Tue, 08 Jan 2013 17:17:00 +0200
+
+winimage (0.130106.1)
+  * seperate edge_detect as a non-image function
+  * have 4 directions color code in edge_detectImage
+  * working on non-maximum suppression as in nmsImage
+  * merge stuff from slotTest0 to slotTest1 and have nmsImage in slotTest0
+  * if no kernel value set to 0 to 3, use 0 (Scharr) as default
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Sun, 06 Jan 2013 20:35:00 +0200
+
+winimage (0.130105.1)
+  * have edge_detectImage and applied to menu item EdgeDetect
+  * have menu item Black&White to replace Test1
+  * function name greyImage changed to blackWhiteImage
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Sat, 05 Jan 2013 21:40:00 +0200
+
+winimage (0.130104.1)
+  * have greyImage(const QImage image) and used in menu Test1
+  * adding QT += widgets to pro that solved problem of #include <QMainWindow>
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Fri, 04 Jan 2013 17:54:00 +0200
+
+winimage (0.130103.1)
+  * shift with re-scaling compensation works almost perfect
+  * none perpendicular line angles work, particularly alpha = 100 instead just 90 degree
+  * more test images like added slant_100x.jpg, slant_42x.jpg and 8x6.jpg
+  * lessons learned as following:
+  * in function transformer::shift, should be x2 = x0 - sin(theta) * x0t2/tan(alpha);
+    instaed of int x2 = *scale * (x0 + *sign * (sin(theta) * x0t2)/tan(alpha));
+  * the order of transform makes sense, and it differs if seperated two transforms were 2+(3.1+3,2),
+    then 3-combined in one transform should be (3.1+3.2)+2
+  * to compensate lost length of in rotation, we should extend the legth to (1 - scale) * lenth
+    where scale = cos(theta) and lenth is full heght or width which affected
+  * if shift and re-scaling operated in two transfors, the rectangle can be more complex: instead move half
+    of the image, we should move 3/4 of the half to avoid un-expeccted left over trace. for example in 3 quater:
+    rect_half.setRect( w2 * (move1 * 0.5 + move2), h2 * (move1 + 0.5 * move2), w2 * (1 + 0.5 * move1), h2 * (1 + 0.5 * move2));
+    fortunately, we can avoid the complex by combine two transforms into one
+  * to unveil the mistake in image transform algorithm, it's good to decompose them into small steps,
+    like WinImage::slotTest0 to WinImage::slotTest4, although we have to share variables among functions
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Thu, 03 Jan 2013 17:47:00 +0200
+
+winimage (0.121228.1)
+  * new shift starts to work, though more work ahead
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Fri, 28 Dec 2012 21:02:00 +0200
+
+winimage (0.121224.1)
+  * examples.pri + pic/9x7.jpg
+  * pan half of the picture, instead of only a quater
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Mon, 24 Dec 2012 14:50:00 +0200
+
+winimage (0.121220.1)
+  * initiated and changelog added
+  * Review: NA
+ -- Xun Chen <chenx77@gmail.com>  Thu, 20 Dec 2012 15:40:00 +0200

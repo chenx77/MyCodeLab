@@ -1,0 +1,5 @@
+sin(theta) * x0t2
+x0t2 = m_cx - x0 + m_cy * t2;
+t2 = tan(theta/2);
+
+sin(theta) * m_cx - x0 + m_cy * tan(theta/2)
